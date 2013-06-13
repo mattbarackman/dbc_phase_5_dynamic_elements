@@ -4,10 +4,27 @@
   margin-right: auto;
 }
 
+div[class=todo] {
+  background-color: #e6c1c1;
+}
+
+.completed {
+  background-color: #c5e6c1;
+}
 .toolbox {
   text-align: center;
 }
 
-.todo.complete h2 {
+.todo.completed h2 {
   text-decoration: line-through;
 }
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+

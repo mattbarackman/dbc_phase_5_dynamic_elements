@@ -4,8 +4,14 @@
   margin-right: auto;
 }
 
+
+.todo_list .todo {
+  padding: 10px;
+}
+
 div[class=todo] {
   background-color: #e6c1c1;
+/*  padding: 10px;*/
 }
 
 .completed {

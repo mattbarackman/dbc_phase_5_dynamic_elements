@@ -1,11 +1,11 @@
 $(document).ready(function() {
+
   var todoTemplate = $.trim($('#todo_template').html());
-  // console.log(todoTemplate);
 
   function bindEvents() {
     // Bind functions which add, remove, and complete todos to the appropriate
     // elements
-    
+
     // Add Todo
     $('.toolbox').on('click', '.add', function(e){
       e.preventDefault();
@@ -40,23 +40,23 @@ $(document).ready(function() {
     // Returns the jQueryDOMElement to be used elsewhere.
     return $todo;
   }
-  
+
   function addTodo(todo) {
     $('.todo_list').prepend(todo);
   }
 
   function removeTodo(todo) {
-    $(todo).fadeOut(500, function() { $(todo).remove(); });
+    $(todo).toggle(500, function() { $(todo).remove(); });
   }
 
   function markTodoComplete(todo) {
     $(todo).addClass('completed');
-    $(todo).find('.complete').html("Uncomplete");
+    $(todo).find('.complete').html("Mark incomplete");
   }
 
   function markTodoIncomplete(todo) {
     $(todo).removeClass('completed');
-    $(todo).find('.complete').html("Complete");
+    $(todo).find('.complete').html("Mark complete");
   }
 
   bindEvents();
